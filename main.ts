@@ -3,6 +3,8 @@ const path = require('path');
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR || '/output';
 
+// The joke is that “irregardless” is already a needless word.
+const entryText = 'irregardless\n';
+
 fs.mkdirSync(outDir, { recursive: true });
-// The joke: "moist" is the most universally disliked word in English, so the entry is just that one unpopular word.
-fs.writeFileSync(path.join(outDir, 'entry.txt'), 'moist\n');
+fs.writeFileSync(path.join(outDir, 'entry.txt'), entryText);
